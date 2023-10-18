@@ -16,14 +16,19 @@ btn.addEventListener("click",function(){
     if(!textbox.value || !numberbox.value){
         error.innerHTML = "Please enter your text and repetation number."
     }else{
-        error.innerHTML = ""
-        copybtn.style.display = "block"
-        for(let i = 0; i < numberbox.value; i++){
-            arr.push(textbox.value)
+        if(numberbox.value > 10){
+            error.innerHTML = "10 tahke boro dewa nished"
         }
-        text_wrapper.innerHTML = arr.join(" ")
-        textbox.value = ""
-        numberbox.value = ""
+        else{
+            error.innerHTML = ""
+            copybtn.style.display = "block"
+            for(let i = 0; i < numberbox.value; i++){
+                arr.push(textbox.value)
+            }
+            text_wrapper.innerHTML = arr.join(" ")
+            textbox.value = ""
+            numberbox.value = ""
+        }
     }
 })
 
