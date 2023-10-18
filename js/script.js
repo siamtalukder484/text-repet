@@ -2,6 +2,7 @@ let textbox = document.querySelector(".textbox")
 let numberbox = document.querySelector(".numberbox")
 let btn = document.querySelector(".btn")
 let copybtn = document.querySelector(".copy")
+let deletebtn = document.querySelector(".delete")
 let overlay = document.querySelector(".overlay")
 let error = document.querySelector(".error")
 let text_wrapper = document.querySelector(".text_wrapper")
@@ -10,6 +11,7 @@ let arr = []
 
 copybtn.style.display = "none"
 overlay.style.display = "none"
+deletebtn.style.display = "none"
 
 
 btn.addEventListener("click",function(){
@@ -25,6 +27,7 @@ btn.addEventListener("click",function(){
             }else{
                 error.innerHTML = ""
                 copybtn.style.display = "block"
+                deletebtn.style.display = "block"
                 for(let i = 0; i < numberbox.value; i++){
                     arr.push(textbox.value)
                 }
@@ -54,6 +57,12 @@ copybtn.addEventListener("click",function(){
       }, 2500);
 
 });
+
+deletebtn.addEventListener("click", function(){
+    copybtn.style.display = "none"
+    deletebtn.style.display = "none"
+    text_wrapper.innerHTML = ""
+})
 
 
 

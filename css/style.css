@@ -44,11 +44,12 @@
     padding: 40px;
     overflow-y: scroll;
 }
-.copy{
+.copy, .delete{
     background-color: blueviolet;
     padding: 10px 20px;
     color: #fff;
     font-size: 18px;
+    cursor: pointer;
 }
 .input_card{
     width: 400px;
