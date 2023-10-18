@@ -20,14 +20,18 @@ btn.addEventListener("click",function(){
             error.innerHTML = "Your repetation limit is 100000"
         }
         else{
-            error.innerHTML = ""
-            copybtn.style.display = "block"
-            for(let i = 0; i < numberbox.value; i++){
-                arr.push(textbox.value)
+            if(numberbox.value < 0){
+                error.innerHTML = "Minuse value is not acceptable"
+            }else{
+                error.innerHTML = ""
+                copybtn.style.display = "block"
+                for(let i = 0; i < numberbox.value; i++){
+                    arr.push(textbox.value)
+                }
+                text_wrapper.innerHTML = arr.join(" ")
+                textbox.value = ""
+                numberbox.value = ""
             }
-            text_wrapper.innerHTML = arr.join(" ")
-            textbox.value = ""
-            numberbox.value = ""
         }
     }
 })
