@@ -16,8 +16,8 @@ btn.addEventListener("click",function(){
     if(!textbox.value || !numberbox.value){
         error.innerHTML = "Please enter your text and repetation number."
     }else{
-        if(numberbox.value > 10){
-            error.innerHTML = "10 tahke boro dewa nished"
+        if(numberbox.value > 100000){
+            error.innerHTML = "Your repetation limit is 100000"
         }
         else{
             error.innerHTML = ""
